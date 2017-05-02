@@ -23,4 +23,8 @@ class HelloApp < Sinatra::Base
 
     msg
   end
+
+  get '/ping' do
+    'pong'
+  end
 end
