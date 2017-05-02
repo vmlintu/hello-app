@@ -1,0 +1,16 @@
+Source: hello-app
+Section: contrib
+Priority: extra
+Maintainer: Veli-Matti Lintu <veli-matti@lintu.fi>
+Build-Depends: debhelper (>= 8.0.0),
+ ruby-bundler,
+ ruby
+Standards-Version: 3.9.3
+Homepage: http://github.com/vmlintu/hello-app
+
+Package: hello-app
+Architecture: all
+Depends: ${misc:Depends},
+ ruby,
+ ruby-bundler
+Description: Hello App is an example app for testing server configuration

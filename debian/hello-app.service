@@ -1,0 +1,14 @@
+# systemd service for running hello-app
+
+[Unit]
+Description=HelloApp
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/hello-app
+ExecStart=/usr/bin/bundle exec puma --workers 3 --port 4567
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
